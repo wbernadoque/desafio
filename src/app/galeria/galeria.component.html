@@ -1,0 +1,16 @@
+<div class="album">
+  <h1>{{ titulo }}</h1>
+
+  <div>
+    <img *ngIf="foto.length" src="{{ foto[fotoAtual] }}" alt="foto 1" />
+    <p *ngIf="!foto.length">Nenhuma foto</p>
+  </div>
+
+  <p *ngIf="foto.length">
+    Foto {{ fotoAtual + 1 }} de {{ foto.length }}
+    <button [disabled]="fotoAtual == 0" (click)="fotoAtual = 0">|<</button>
+    <button [disabled]="fotoAtual == 0" (click)="previous()"><</button>
+    <button [disabled]="fotoAtual == 4" (click)="next()">></button>
+    <button [disabled]="fotoAtual == 4" (click)="fotoAtual = 4">>></button>
+  </p>
+</div>
