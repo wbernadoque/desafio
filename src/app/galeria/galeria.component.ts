@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./galeria.component.css'],
 })
 export class GaleriaComponent {
-  @Input() foto: string[];
+  @Input() foto: string[] = [];
   @Input() titulo: string;
   next() {
     this.fotoAtual++;
